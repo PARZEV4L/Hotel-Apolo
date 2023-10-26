@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Apolo</title>
+    <link rel="stylesheet" href="Assets\Styles\Style.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="Assets\logo.png" alt="Logo Apolo">
+        <h2>Hotel Apolo</h2>
+        <h2><a href="habitaciones.html">Habitaciones</a></h2>
+        <h2><a href="reservas.html">Reservar</a></h2>
+    </header>
+
+    <main>
+        <div>
+            <form>
+                <label for="identificacion">Identificación:</label><br>
+                <input type="text" id="id" name="identificacion"><br>
+
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre"><br>
+
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br>
+
+                <label for="edad">Edad:</label><br>
+                <input type="number" id="edad" name="edad"><br>
+
+                <label for="correo_electronico">Correo electrónico:</label><br>
+                <input type="email" id="correo_electronico" name="correo_electronico"><br>
+
+                <label for="NumeroCelular">Numero de celular:</label><br>
+                <input type="text" id="phoneNumber" name="correo_electronico"><br>
+
+                <label for="tipo_habitacion">Tipo de habitación:</label><br>
+                <select id="tipo_habitacion" name="tipo_habitacion">
+                    <option value="">Seleccione una opción</option>
+                    <option value="individual">Individual</option>
+                    <option value="doble">Doble</option>
+                    <option value="triple">Triple</option>
+                    <option value="suite">Suite</option>
+                </select><br>
+
+                <label for="foto_habitacion">Foto habitación:</label><br>
+                <h2>Habitacion familiar</h2>
+
+                <img src="Assets\Duo.jfif" alt="">
+                <img src="Assets\Pareja.jfif" alt=""><br>
+                <br>
+                <h2>Habitacion Pareja</h2>
+
+                <img src="Assets\Pareja.jfif" alt=""><br>
+                <h2>Habitacion Duo</h2>
+
+                <img src="Assets\Duo.jfif" alt=""><br>
+                <h2>Habitacion Individual</h2>
+
+                <img src="Assets\individual.jfif" alt=""><br>
+                <br>
+                <label for="valor_habitacion">Valor habitación:</label><br>
+
+                <label for="fecha_ingreso">Fecha ingreso:</label><br>
+                <input type="date" id="fecha_ingreso" name="fecha_ingreso"><br>
+
+                <label for="fecha_salida">Fecha salida:</label><br>
+                <input type="date" id="fecha_salida" name="fecha_salida"><br>
+
+                <p></p>
+
+                <label for="servicio_adicional_1">Servicio adicional 1:</label><br>
+                <select id="servicio_adicional_" name="Servicio adicional">
+                    <option value="">Seleccione una opción</option>
+                    <option value="individual">Masajistas. (Pago adicional 20$)</option>
+                    <option value="doble">Spas</option>
+                    <option value="triple">Tours locales. (Pago adicional 15$ por persona)</option>
+                    <option value="suite">Guardería para mascotas (se aceptan todas las razas e incluido en cualquier
+                        habitacion).</option>
+                </select>
+                <br>
+                <button  onclick=" ValidarForm()">Validar</button>
+
+        </div>
+    </main>
+
+    <footer>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.349123301691!2d-75.5623603242188!3d10.393821066132858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625936b260037%3A0x971b1d96fafed9d!2sHilton%20Cartagena!5e0!3m2!1ses!2sco!4v1698076742004!5m2!1ses!2sco"
+            width="300px" height="200px" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
+
+    </footer>
+    <script src="Assets/JS/script.js"></script>
+</body>
+
+</html>
