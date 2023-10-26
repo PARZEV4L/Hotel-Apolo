@@ -1,23 +1,6 @@
 function validarForm() {
-    // Obtener los valores de los campos
-    var identificacion = document.getElementById('identificacion').value;
-    var nombre = document.getElementById('nombre').value;
-    var fechaNacimiento = document.getElementById('fecha_nacimiento').value;
-    var edad = document.getElementById('edad').value;
-    var correoElectronico = document.getElementById('correo_electronico').value;
-    var numeroCelular = document.getElementById('phoneNumber').value;
-    var tipoHabitacion = document.getElementById('tipo_habitacion').value;
-    var servicioAdicional = document.getElementById('servicio_adicional').value;
-
-    // Verificar si los campos obligatorios no están vacíos
-    if (identificacion === "" || nombre === "" || fechaNacimiento === "" || edad === "" || correoElectronico === "" || numeroCelular === "" || tipoHabitacion === "" || servicioAdicional === "") {
-        alert("Por favor complete todos los campos obligatorios.");
-        return false; // Evitar el envío del formulario si hay campos vacíos
-    }
-
-    // Agrega aquí más validaciones según tus requisitos
-
-    // Si todas las validaciones tienen éxito, envía el formulario
+    
+    Validar();
     document.getElementById("myForm").submit();
 }
 
