@@ -26,10 +26,10 @@
                 <input type="text" id="nombre" name="nombre"><br>
 
                 <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br>
-
-                <label for="edad">Edad:</label><br>
-                <input type="number" id="edad" name="edad"><br>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required oninput="calcularedad()"> <br>
+                <label for="resultadoEdad">Tu edad es: <span id="resultadoEdad"> </span></label> <br>
+               
+      
 
                 <label for="correo_electronico">Correo electrónico:</label><br>
                 <input type="email" id="correo_electronico" name="correo_electronico"><br>
@@ -38,15 +38,15 @@
                 <input type="text" id="phoneNumber" name="correo_electronico"><br>
 
                 <label for="tipo_habitacion">Tipo de habitación:</label><br>
-                <select id="tipo_habitacion" name="tipo_habitacion">
+                <select id="tipo_habitacion" name="tipo_habitacion" required oninput="calcularvalor()">
                     <option value="">Seleccione una opción</option>
+                    <option value="familiar">familiar</option>
+                    <option value="Pareja">Pareja</option>
+                    <option value="Doble">Doble</option>
                     <option value="individual">Individual</option>
-                    <option value="doble">Doble</option>
-                    <option value="triple">Triple</option>
-                    <option value="suite">Suite</option>
                 </select><br>
 
-                <label for="foto_habitacion">Foto habitación:</label><br>
+                <!-- <label for="foto_habitacion">Foto habitación:</label><br>
                 <h2>Habitacion familiar</h2>
 
                 <img src="Assets\Duo.jfif" alt="">
@@ -61,16 +61,45 @@
                 <h2>Habitacion Individual</h2>
 
                 <img src="Assets\individual.jfif" alt=""><br>
-                <br>
-                <label for="valor_habitacion">Valor habitación:</label><br>
+                <br> -->
+
+                <label for="valor_habitacion">Valor habitación:<span id="valor_habitacion"> </span></label> <br>
+
 
                 <label for="fecha_ingreso">Fecha ingreso:</label><br>
                 <input type="date" id="fecha_ingreso" name="fecha_ingreso"><br>
 
                 <label for="fecha_salida">Fecha salida:</label><br>
-                <input type="date" id="fecha_salida" name="fecha_salida"><br>
+                <input type="date" id="fecha_salida" name="fecha_salida" required oninput="calcularnoches()"><br>
 
-                <p></p>
+                <label for="cantidadnoches">Cantidad de noches:<span id="cantidadnoches"> </span></label> <br>
+                
+                <label > </span></label> <br>
+                <label for="servicio_adicional_1">Servicio adicional 1:</label><br>
+                <select id="servicio_adicional_1" name="Servicio adicional 1">
+                    <option value="">Seleccione una opción</option>
+                    <option value="individual">Masajistas. (Pago adicional 20$)</option>
+                    <option value="doble">Spas</option>
+                    <option value="triple">Tours locales. (Pago adicional 15$ por persona)</option>
+                    <option value="suite">Guardería para mascotas (se aceptan todas las razas e incluido en cualquier
+                        habitacion).</option>
+                </select>
+
+                <label for="valor_servicio1">Valor servicio:<span id="valor_servicio1"> </span></label> <br>
+
+                <label for="servicio_adicional_2">Servicio adicional 2:</label><br>
+                <select id="servicio_adicional_2" name="Servicio adicional 2">
+                    <option value="">Seleccione una opción</option>
+                    <option value="individual">Masajistas. (Pago adicional 20$)</option>
+                    <option value="doble">Spas</option>
+                    <option value="triple">Tours locales. (Pago adicional 15$ por persona)</option>
+                    <option value="suite">Guardería para mascotas (se aceptan todas las razas e incluido en cualquier
+                        habitacion).</option>
+                </select>
+
+                <label for="valor_servicio1">Valor servicio:<span id="valor_servicio1"> </span></label> <br>
+                <label for="subtotal">Subtotal :<span id="subtotal"> </span></label> <br>
+                <label for="IVA">IVA: <span id="IVA"> </span></label> <br>
 
                 <label for="servicio_adicional_1">Servicio adicional 1:</label><br>
                 <select id="servicio_adicional_" name="Servicio adicional">
@@ -82,7 +111,8 @@
                         habitacion).</option>
                 </select>
                 <br>
-                <button  onclick=" ValidarForm()">Validar</button>
+                <button  onclick=" Validar()">Calcular total</button>
+                <label for="Total">Total: <span id="total"> </span></label> <br>
 
         </div>
     </main>
