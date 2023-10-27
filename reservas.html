@@ -23,10 +23,10 @@
         <div>
             <form class="formulario">
                 <label for="identificacion">Identificación:</label><br>
-                <input type="text" id="id" name="identificacion"><br>
+                <input type="text" id="id" name="identificacion" required oninput="ValidarId()"><br>
 
                 <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre"><br>
+                <input type="text" id="nombre" name="nombre"  required oninput="Validarnombre()"><br>
 
                 <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
                 <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required oninput="calcularedad()"> <br>
@@ -35,30 +35,31 @@
       
 
                 <label for="correo_electronico">Correo electrónico:</label><br>
-                <input type="email" id="correo_electronico" name="correo_electronico"><br>
+                <input type="email" id="correo_electronico" name="correo_electronico" required  onblur="validarcorreo()"><br>
 
                 <label for="NumeroCelular">Numero de celular:</label><br>
-                <input type="text" id="phoneNumber" name="correo_electronico"><br>
+                <input type="text" id="phoneNumber" name="correo_electronico" required oninput="Validarnumber()"><br>
 
                 <label for="tipo_habitacion">Tipo de habitación:</label><br>
-                <select id="tipo_habitacion" name="tipo_habitacion" required oninput="calcularvalor()">
+                <select id="tipo_habitacion" name="tipo_habitacion" required oninput="calcularvalor()"  >
                     <option value="">Seleccione una opción</option>
                     <option value="familiar">familiar</option>
                     <option value="Pareja">Pareja</option>
                     <option value="Doble">Doble</option>
                     <option value="individual">Individual</option>
                 </select><br>
-
+                <img id= "selecthabitacion" src="" alt="">
+                <img id= "selecthabitacion2" src="" alt="">
                 
 
                 <label for="valor_habitacion">Valor habitación:<span id="valor_habitacion"> </span></label> <br>
 
 
-                <label for="fecha_ingreso">Fecha ingreso:</label><br>
-                <input type="date" id="fecha_ingreso" name="fecha_ingreso"><br>
+                <label for="fecha_ingreso" ">Fecha ingreso:</label><br>
+                <input type="date" id="fecha_ingreso" name="fecha_ingreso" required onblur ="validarfechallegada()"><br>
 
                 <label for="fecha_salida">Fecha salida:</label><br>
-                <input type="date" id="fecha_salida" name="fecha_salida" required oninput="calcularnoches()"><br>
+                <input type="date" id="fecha_salida" name="fecha_salida"  required onblur ="validarfechasalida()"><br>
 
                 <label for="cantidadnoches">Cantidad de noches:<span id="cantidadnoches"> </span></label> <br>
 
@@ -85,15 +86,15 @@
                 </select><br>
 
                 <label for="valor_servicio2">Valor servicio:<span id="valor_servicio2"> </span></label> <br>
-
-                <label for="subtotal">Subtotal :<span id="subtotal"> </span></label> <br>
-
-                <label for="IVA">IVA: <span id="IVA"> </span></label> <br>
-
-                <button id="validacion" onclick=" subtotal()">Calcular total</button><br>
-
-                <label for="Total">Total: <span id="total"> </span></label> <br>
+              
             </form>
+            <label for="subtotal">Subtotal :<span id="subtotal"> </span></label> <br>
+
+            <label for="IVA">IVA: <span id="IVA"> </span></label> <br>
+
+            <label for="Total">Total: <span id="total"> </span></label> <br>
+            <button id="validacion" onclick="subtotal()">Calcular total</button><br>
+            
         </div>
     </main>
 
