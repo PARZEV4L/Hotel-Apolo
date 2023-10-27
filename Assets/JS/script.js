@@ -55,7 +55,7 @@ function calcularvalor() {
     else if (tipohabitacion == "Doble") { 
         valor = 50;
     }
-    else {
+    else if (tipohabitacion == "individual") {
         valor = 30;
     }
     document.getElementById("valor_habitacion").textContent = valor;
@@ -89,7 +89,7 @@ function calcularvalorservicio1() {
     else if (tiposervicio == "3") { 
         valor = 15;
     }
-    else {
+    else if(tiposervicio == "4") {
         valor = 0;
     }
     document.getElementById("valor_servicio1").textContent = valor;
@@ -107,7 +107,7 @@ function calcularvalorservicio2() {
     else if (tiposervicio == "3") { 
         valor = 15;
     }
-    else {
+    else if(tiposervicio == "4") {
         valor = 0;
     }
     document.getElementById("valor_servicio2").textContent = valor;
