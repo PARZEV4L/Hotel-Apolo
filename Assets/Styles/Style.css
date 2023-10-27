@@ -1,20 +1,50 @@
 body {
     margin: 0;
-}
-
-header {
-    background-color: #C3EDC0;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.logo {
-    width: 114px;
-    height: 70px;
-    display: inline;
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    background-color: aquamarine;
+    align-items: center;
+    padding: 15px;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img{
+    height: 100px;
+    width: 150px;
+    margin-right: 10px;
+    
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: darkorange;
+}
+
+
 
 main div {
+   
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
@@ -22,6 +52,8 @@ main div {
     align-items: center;
     justify-content: center;
 }
+
+
 
 .formulario {
     font-family: "Roboto", sans-serif;
@@ -58,4 +90,14 @@ button {
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
+}
+
+footer{
+    background-color: black;
+    margin-top: auto;
+}
+
+footer iframe{
+    margin-left: 15px;
+    margin-top: auto;
 }

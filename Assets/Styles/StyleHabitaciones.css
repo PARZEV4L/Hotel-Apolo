@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    background-color: aquamarine;
+    align-items: center;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    height: 100px;
+    width: 150px;
+    margin-right: 10px;
+
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover {
+    color: darkorange;
+}
+
+main {
+    text-align: center;
+}
+
+.Contenedor {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+
+}
+
+.habitaciones {
+    background-color: chartreuse;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+footer {
+    background-color: black;
+    margin-top: auto;
+}
+
+footer iframe {
+    margin-left: 15px;
+    margin-top: auto;
+}
