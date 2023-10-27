@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Apolo</title>
     <link rel="stylesheet" href="Assets\Styles\Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +21,7 @@
 
     <main>
         <div>
-            <form>
+            <form class="formulario">
                 <label for="identificacion">Identificación:</label><br>
                 <input type="text" id="id" name="identificacion"><br>
 
@@ -46,22 +49,7 @@
                     <option value="individual">Individual</option>
                 </select><br>
 
-                <!-- <label for="foto_habitacion">Foto habitación:</label><br>
-                <h2>Habitacion familiar</h2>
-
-                <img src="Assets\Duo.jfif" alt="">
-                <img src="Assets\Pareja.jfif" alt=""><br>
-                <br>
-                <h2>Habitacion Pareja</h2>
-
-                <img src="Assets\Pareja.jfif" alt=""><br>
-                <h2>Habitacion Duo</h2>
-
-                <img src="Assets\Duo.jfif" alt=""><br>
-                <h2>Habitacion Individual</h2>
-
-                <img src="Assets\individual.jfif" alt=""><br>
-                <br> -->
+                
 
                 <label for="valor_habitacion">Valor habitación:<span id="valor_habitacion"> </span></label> <br>
 
@@ -105,7 +93,7 @@
                 <button id="validacion" onclick=" subtotal()">Calcular total</button><br>
 
                 <label for="Total">Total: <span id="total"> </span></label> <br>
-
+            </form>
         </div>
     </main>
 
