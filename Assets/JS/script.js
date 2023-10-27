@@ -1,9 +1,5 @@
 
-function Validar() {
-    ValidarId();
-    Validarnumber();
-    
-}
+
 function ValidarId() {
     var id = document.getElementById("id").value;
 
@@ -11,7 +7,7 @@ function ValidarId() {
         alert("la identificacion es invalida");
     }
 
-    if (id.length > 12) {
+    if (id.length > 11) {
         alert("la identificacion es invalida");
     }
 }
@@ -55,10 +51,11 @@ function calcularvalor() {
     else if (tipohabitacion == "Doble") { 
         valor = 50;
     }
-    else {
+    else if (tipohabitacion == "individual") {
         valor = 30;
     }
-    document.getElementById("valor_habitacion").textContent = valor;
+    cambioimagen()
+    document.getElementById("valor_habitacion").textContent = valor+"$";
     return valor;
 }
 function calcularnoches(){ 
@@ -89,10 +86,10 @@ function calcularvalorservicio1() {
     else if (tiposervicio == "3") { 
         valor = 15;
     }
-    else {
+    else if(tiposervicio == "4") {
         valor = 0;
     }
-    document.getElementById("valor_servicio1").textContent = valor;
+    document.getElementById("valor_servicio1").textContent = valor+"$";
     return valor;
 }
 function calcularvalorservicio2() {
@@ -107,10 +104,10 @@ function calcularvalorservicio2() {
     else if (tiposervicio == "3") { 
         valor = 15;
     }
-    else {
+    else if(tiposervicio == "4") {
         valor = 0;
     }
-    document.getElementById("valor_servicio2").textContent = valor;
+    document.getElementById("valor_servicio2").textContent = valor+"$";
     return valor;
 }
 function subtotal(){
@@ -119,7 +116,77 @@ function subtotal(){
  var valor_habitacion= calcularvalor();
  var noches= calcularnoches();
 var subtotal=0;
-
+var IVA=0;
+var Total=0;
 subtotal= (valor_habitacion*noches)+(servicio_adicional_1+servicio_adicional_2);
-document.getElementById("subtotal").textContent = subtotal;
+IVA=subtotal*0.19;
+Total= subtotal+IVA;
+document.getElementById("subtotal").textContent = subtotal+"$";
+document.getElementById("IVA").textContent = IVA+"$";
+document.getElementById("total").textContent =Total+"$";
 }
+function validarfechallegada(){ 
+    var fechallgada = new Date(document.getElementById("fecha_ingreso").value) ;
+    var fechactual= new Date();
+    if(fechallgada<=fechactual){
+        alert("fecha llegada invalida");
+    }
+    
+}
+function validarfechasalida(){ 
+    var fechasalida = new Date(document.getElementById("fecha_salida").value) ;
+    var fechaingre= new Date(document.getElementById("fecha_ingreso").value);
+    if(fechaingre>=fechasalida){
+        alert("fecha salida invalida");
+    }else{
+   calcularnoches();
+}
+}
+
+
+function calcularnochessegunfecha(fechallegada, fecha_salida) {
+var fechalleg = new Date(fechallegada);
+var fechasalida = new Date(fecha_salida);
+var diferencia = fechasalida - fechalleg;
+var noches = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+return noches;
+}
+function Validarnombre(){
+
+    var nombre = document.getElementById("nombre").value;
+    var aux= /^[A-Za-z\s]+$/;
+    if (!aux.test(nombre)) {
+       alert("Nombre invalido");
+    }
+
+}
+
+function validarcorreo() {
+    var correo= document.getElementById("correo_electronico").value;
+    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        if(!regex.test(correo)){
+            alert("Correo invalido");
+        }
+
+  }
+  function cambioimagen(){
+    var tipo_habitacion=document.getElementById("tipo_habitacion").value;
+    var imagen=null;
+    var imagen2=null;
+    if(tipo_habitacion=="familiar"){
+        imagen= "/Assets/Pareja.png";
+        imagen2= "/Assets/Duo.png";
+        
+    }else if(tipo_habitacion=="Pareja"){
+        imagen= "/Assets/Pareja.png";
+        imagen2= "";
+    }else if(tipo_habitacion=="Doble"){
+        imagen= "/Assets/Duo.png";
+        imagen2= "";
+    }else if(tipo_habitacion=="individual"){
+        imagen= "/Assets/individual.jfif";
+        imagen2= "";
+    }
+    document.getElementById("selecthabitacion2").src=imagen2;
+    document.getElementById("selecthabitacion").src=imagen;
+  }
