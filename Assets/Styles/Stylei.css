@@ -1,4 +1,5 @@
 body{
+    background-color: rgb(236, 238, 129, 0.5);
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -6,10 +7,11 @@ body{
 }
 
 header{
+    font-family: "Inter", sans-serif;
     display: flex;
     justify-content: space-between;
     height: 65px;
-    background-color: aquamarine;
+    background-color: #82A0D8;
     align-items: center;
     padding: 15px;
 }
@@ -41,15 +43,17 @@ nav a:hover{
     color: darkorange;
 }
 main{
+    font-family: "Roboto", sans-serif;
     text-align: center;
 }
 
 footer{
-    background-color: black;
     margin-top: auto;
+    background-color: rgb(237, 183, 237, 1.5);
+    height: 100px;
 }
 
 footer iframe{
     margin-left: 15px;
-    margin-top: auto;
+
 }
