@@ -143,14 +143,6 @@ function validarfechasalida(){
 }
 }
 
-
-function calcularnochessegunfecha(fechallegada, fecha_salida) {
-var fechalleg = new Date(fechallegada);
-var fechasalida = new Date(fecha_salida);
-var diferencia = fechasalida - fechalleg;
-var noches = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-return noches;
-}
 function Validarnombre(){
 
     var nombre = document.getElementById("nombre").value;
